@@ -1,1 +1,20 @@
 # data-engineering-lab
+
+A portfolio lab of data engineering projects — pipelines, orchestration, and data
+movement patterns — from simple ELT jobs to more complete orchestrated workflows.
+
+## Projects
+
+| # | Project | Description | Stack |
+|---|---------|-------------|-------|
+| 01 | [postgres-elt-pipeline](01-postgres-elt-pipeline/) | Dockerized ELT pipeline moving seed data from a source Postgres database into a destination Postgres database | Python, PostgreSQL, Docker Compose |
+
+## How to navigate
+
+Each sub-project lives in its own numbered folder (`0X-project-name/`) and is independent:
+
+- `README.md` — what the project does, why it matters, and how it's built
+- its own source tree and run instructions (Docker Compose, scripts, etc. depending on the project)
+
+Projects are ordered by increasing complexity. Each has its own dependencies and can be
+run in isolation — see the "How to run" section in each project's README.
