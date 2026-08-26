@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# Rejects commit messages that mention Claude/Anthropic (case-insensitive).
-if grep -qiE 'claude|anthropic' "$1"; then
-  echo "commit-msg hook: message mentions Claude/Anthropic — remove it and retry." >&2
-  exit 1
-fi
