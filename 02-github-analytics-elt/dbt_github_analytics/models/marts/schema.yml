@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: pr_metrics
+    description: One row per pull request, with computed merge duration and a speed classification.
+    columns:
+      - name: pr_id
+        description: Unique identifier of the pull request (from GitHub).
+        tests:
+          - unique
+          - not_null
+      - name: merge_speed
+        description: Bucketed merge speed classification.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Fast', 'Medium', 'Slow', 'Not merged']

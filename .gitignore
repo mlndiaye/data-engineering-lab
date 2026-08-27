@@ -5,4 +5,6 @@ __pycache__/
 .env
 dbt-env
 01-postgres-elt-pipeline/logs/
+02-github-analytics-elt/bigquery-sa-key.json
+02-github-analytics-elt/logs/
 
