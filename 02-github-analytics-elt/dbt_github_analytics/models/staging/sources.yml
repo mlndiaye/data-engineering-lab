@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: github
+    database: github-analytics-elt
+    schema: github_analytics
+    tables:
+      - name: commits
+      - name: issues
+      - name: pull_requests
+      - name: reviews
