@@ -3,6 +3,6 @@
 __pycache__/
 *.pyc
 .env
-01-postgres-elt-pipeline/dbt-env
+dbt-env
 01-postgres-elt-pipeline/logs/
 
