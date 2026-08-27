@@ -8,7 +8,7 @@ movement patterns — from simple ELT jobs to more complete orchestrated workflo
 | # | Project | Description | Stack |
 |---|---------|-------------|-------|
 | 01 | [postgres-elt-pipeline](01-postgres-elt-pipeline/) | Dockerized ELT pipeline moving seed data from a source Postgres database into a destination Postgres database, transformed with dbt and orchestrated with Airflow | Python, PostgreSQL, dbt, Airflow, Docker Compose |
-| 02 | [github-analytics-elt](02-github-analytics-elt/) | GitHub repository activity (PRs, issues, commits, reviews) ingested via Airbyte into BigQuery, transformed with dbt into PR merge metrics | Airbyte, BigQuery, dbt |
+| 02 | [github-analytics-elt](02-github-analytics-elt/) | GitHub repository activity (PRs, issues, commits, reviews) ingested via Airbyte into BigQuery, transformed with dbt into PR merge/review metrics, orchestrated with a dedicated Airflow instance | Airbyte, BigQuery, dbt, Airflow, Docker Compose |
 
 ## How to navigate
 
@@ -32,5 +32,6 @@ list alone tells the story of how each project evolved:
 | `01-script-postgres-dbt` | dbt transformation layer on top of the hand-written `elt_script.py` / Postgres-to-Postgres pipeline |
 | `01-script-postgres-dbt-airflow` | Airflow orchestration on top of the above |
 | `02-airbyte-bigquery-dbt` | Project 02: GitHub → Airbyte → BigQuery → dbt |
+| `02-airbyte-bigquery-dbt-airflow` | Airflow orchestration on top of the above (separate Airflow instance from project 01's) |
 
 Naming pattern: `<project-number>-<EL-tool>-<destination>-<transformation>[-<orchestrator>]`.
