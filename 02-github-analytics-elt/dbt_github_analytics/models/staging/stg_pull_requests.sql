@@ -12,3 +12,4 @@ select
     repository
 
 from {{ source('github', 'pull_requests') }}
+qualify row_number() over (partition by id order by _airbyte_extracted_at desc) = 1
